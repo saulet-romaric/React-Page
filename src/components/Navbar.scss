@@ -1,0 +1,68 @@
+
+
+@mixin img($height , $width) {
+    height: $height;
+    width: $width;
+}
+
+@mixin button($size , $color) {
+    font-size: $size;
+    color: $color;
+
+}
+
+
+.contain{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    width: 100%;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+
+}
+.logo{
+    @include img(50px, 97px);
+    margin: 20px 15px 25px 25px;
+}
+.like{
+    @include img(35px, 35px);
+    margin-top: 10px;
+}
+
+.button1{
+    @include button(30px , #008dcf);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #008dcf;
+    border-radius:6px;
+    background-color: #fff;
+    margin: 10px 35px 10px 30px;
+    padding: 5px 10px 5px 10px;
+    font-size: 20px;
+}
+
+.link{
+    text-decoration: none;
+    color: #2b2b2b;
+    margin: 10px 10px 10px 10px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.link:hover{
+    color: #008dcf;
+}
+
+.active, link{
+    color: #008dcf;
+}
+
+.like-container{
+    text-align: center;
+    p{
+        font-size: 13px;
+        color: #2b2b2b;
+    }
+}

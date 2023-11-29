@@ -1,38 +1,66 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+body {
+    margin-top: 7%;
+    margin-bottom: 0px;
+    padding: 0;
+    width: 100%;
+    background-color: #f0f0f0;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  .App {
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .before-footer{
+    background-color: #f0f0f0;;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+    margin-bottom: 0px;
+    position: relative;
+    padding: 10px 0px 5px 0px;
+    top: 10px;
+    
   }
-}
+  
+  .link-before{
+    color: #000;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0px 10px;
+  }
+  
+  .jump-back{
+    display: flex;
+    width: 100%;
+    justify-content: space-between; 
+    background-color: #f0f0f0; /* Couleur de fond pour visualiser le conteneur */
+    padding: 10px; /* Ajoute un peu d'espace intérieur pour la clarté visuelle */
+  }
+  
+  .jump-item {
+    padding: 10px; /* Ajoute un peu d'espace intérieur pour la clarté visuelle */
+  
+  }
+  
+  .jump-back-1{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items:self-start; 
+    background-color: #f0f0f0; /* Couleur de fond pour visualiser le conteneur */
+    padding: 10px; /* Ajoute un peu d'espace intérieur pour la clarté visuelle */
+    margin: 0px 100px 0px 1 0px;
+    text-align: center;
+  }
+  
+  .jb{
+    position:relative;
+    top: 16px;
+  }
+  
+  .jb-1{
+    width: 30px;
+    height: 20px;
+  }
