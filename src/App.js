@@ -3,9 +3,27 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Carousel from './Carousel';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import './Carousel1.scss'; // Créez ce fichier pour ajouter des styles personnalisés si nécessaire
 
 
 function App() {
+
+  const images = [
+        
+    'images/1.jpg',
+    'images/11.jpg',
+    'images/2.jpg',
+    'images/5.jpg',
+    'images/6.jpg',
+    'images/7.jpg',
+    'images/8.jpg',     
+    'images/9.jpg',
+    // ... ajoutez autant d'URL d'images que nécessaire
+  ];
+
   return (
     <div className="App">
       <Navbar />
@@ -70,7 +88,7 @@ function App() {
 
         {/* Carousel */}
         <div>
-            
+            <Carousel images={images} />
         </div>
 
         {/* Description */}

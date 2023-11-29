@@ -1,0 +1,92 @@
+// src/components/Carousel1.scss
+.carousel {
+    background-color: black;
+    opacity: 0.8;
+  
+    &.fullscreen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1000;
+  
+      .carousel-container {
+        max-width: none;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+      }
+  
+      .carousel-item {
+        &.large-image {
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; // Ajustez cela en fonction de vos préférences
+          }
+        }
+      }
+  
+      .fullscreen-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgb(0, 0, 0); // Augmentez l'opacité pour améliorer la visibilité
+        display: flex;
+        justify-content: center;
+        align-items: center;
+  
+        .close-icon,
+        .prev-icon,
+        .next-icon {
+          position: absolute;
+          top: 20px;
+          color: white;
+          font-size: 40px;
+          cursor: pointer;
+        }
+  
+        .close-icon {
+          right: 20px;
+        }
+  
+        .prev-icon {
+          left: 200px;
+          top: 400px;
+        }
+  
+        .next-icon {
+          right: 200px;
+          top: 400px;
+        }
+  
+        img {
+          max-width: 80%; // Ajustez la largeur de l'image en fonction de vos préférences
+          max-height: 80vh;
+          background-color: rgba(0, 0, 0, 1); // Ajustez la hauteur de l'image en fonction de vos préférences
+        }
+      }
+    }
+  }
+  
+  .carousel-container {
+    background-color: black;
+    max-width: 500px;
+    margin: auto;
+  }
+  
+  .carousel-item {
+    position: relative;
+    text-align: center;
+  
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      height: 500px;
+      margin: 0 auto;
+    }
+  }
+  
