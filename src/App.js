@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Carousel from './Carousel';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import Slider from "react-slick";
 import './Carousel1.scss'; // Créez ce fichier pour ajouter des styles personnalisés si nécessaire
 
 
@@ -24,14 +25,23 @@ function App() {
     // ... ajoutez autant d'URL d'images que nécessaire
   ];
 
+    const settings = {
+      className: "center",
+      infinite: true,
+      speed: 500,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+    };
+
   return (
     <div className="App">
       <Navbar />
+      <br/>
       <div className="container">
 
         {/* bouton retour */}
 
-      <div className='jump-back'>
+          <div className='jump-back'>
         <div className='jb'>
             <img className="jb-1" src="/images/long-arrow.svg" alt="Logo"/>
             &nbsp;
@@ -41,107 +51,126 @@ function App() {
             <div className='jump-back-1'>
               <div>
                 <img className="" src="/images/chevron-left-gray.svg" alt="Logo"/>
-                retour à la liste &nbsp;&nbsp;
+                Retour à la liste &nbsp;&nbsp;
               </div>
               <div>
-                retour à la liste
+                Retour à la liste
                 <img className="" src="/images/chevron-right-gray.svg" alt="Logo"/>
-              </div>
-                
-                
-                 
+              </div>    
         </div>   
 
     </div>
-      </div>
+          </div>
 
         {/* fin bouton retour */}
 
-      <div>
-          Studio
-      </div>
+
+      <div className='container'>
+          
 
       {/* Deuxieme section */}
-      <div>
+      <div className='first-section'>
+        <div className='items-section'>
         {/* Bloc 1 */}
-        <div>
-
-          {/* Texte intro */}
-          <div>
-            <p>
-            1 pièce • 10m²
-            </p>
-            <p>
-            PARIS 16E (75016)
-            </p>
+        <div className='items-section-1'>
+          <div className='littleTexte'>
+              Studio
           </div>
+          {/* Texte intro */}
+          <div className='first-blox-section'>
+            <div className='textBold'>
+            1 pièce • 10m²
+            </div>
+            <div className='textBold'>
+            105 000 €
+            </div>
+          </div>
+          <div className='first-blox-section'>
           <div>
-          <p>
-          105 000 €
-          </p>
-          <p>       
-          Estimez votre déménagement
-          </p>
+          PARIS 16E (75016)
+          </div>
+            <a href='/' className='red-link'>Vous demenagez?</a>
           </div>
 
         </div>
 
         {/* Carousel */}
         <div>
+          <br/>
             <Carousel images={images} />
+            <br/>
         </div>
 
         {/* Description */}
         <div>
           <div>
-            <h6> Description du bien </h6>
-            <hr/>
+            <h4> Description du bien </h4>
+            <hr className='barre'/>
           </div>
         </div>
 
         <div>
-          <button>Chauffage: électrique</button>
-          <button>Nombre d'étages du bâtiment:7</button>
-          <button>Etage du bien:7e</button>
-          <button>Gardien</button>
-          <button>Nombre de salle d'eau:1 Salle d'eau</button>
+          <button className='buttonPrst'>Chauffage: <span>électrique</span></button>
+          <button className='buttonPrst'>Nombre d'étages du bâtiment:<span>7</span></button>
+          <button className='buttonPrst'>Etage du bien:<span>7e</span></button>
+          <button className='buttonPrst'>Gardien</button>
+          <button className='buttonPrst'>Nombre de salle d'eau: <span>1 Salle d'eau</span></button>
         </div>
 
         <div>
           <p>
+          <br/>
           Casavo vous propose à la vente ce studio d'une pièce de 9.7 m² Surface habitable: 10,11 m² localisé Rue Mirabeau, Paris. Ce bien se situe dans un immeuble de 1925, situé au 7ème étage sans ascenseur. Il se compose d'une pièce de vie, de 2 WC sur palier. Le studio est libre de toute occupation. Charges de copropriété : 20 euros par mois. Taxe foncière : 186 euros par an Ce bien est commercialisé par Casavo. Intéressé par ce bien ? Plus d'informations sur le site de Casavo. Prix hors frais notariés, d'enregistrement et de publicité foncière.
           </p>
         </div>
 
         <div>
-          <button><img src='/' alt='logo'/> Obtenir l'adresse</button>
-          <button><img src='/' alt='logo'/>Etre rappelé</button>
-          <button><img src='/' alt='logo'/>Demande une visite</button>
+          <button className='buttonCall'><img src='images/pin-map.svg' alt='logo'/> Obtenir l'adresse</button>
+          <button className='buttonCall'><img src='images/phone.svg' alt='logo'/>Etre rappelé</button>
+          <button className='buttonCall'><img src='images/users.svg' alt='logo'/>Demande une visite</button>
         </div>
-        <h6>Diagnostics énergétiques</h6>
-        <div>
-          <p>
-            Diagnostic de performance énergétique (DPE)
+        <br/>
+        <h4>Diagnostics énergétiques</h4>
+        <div className='first-blox-section'>
+          <p className='textMedium'>
+            Diagnostic de performance<br/> énergétique (DPE)
           </p>
-          <p>
-          Indice d'émission de gaz à effet de serre (GES)
+          <p className='textMedium'>
+          Indice d'émission de gaz à effet de<br/> serre (GES)
           </p>
         </div>
         {/* forme jauge */}
-        <div>
-
+        <div className='jauge'>
+          <div className='jauge-item'>
+          <div className='carré-1'></div>
+          <div className='carré-2'></div>
+          <div className='carré-3'></div>
+          <div className='carré-4'></div>
+          <div className='carré-5'></div>
+          <div className='carré-6'></div>
+          <div className='carré-7'><p className='ptx'>G</p></div>
+          </div>
+          <div className='jauge-item-1' >
+          <div className='carré-8'></div>
+          <div className='carré-9'></div>
+          <div className='carré-10'><p className='ptx'>C</p></div>
+          <div className='carré-11'></div>
+          <div className='carré-12'></div>
+          <div className='carré-13'></div>
+          <div className='carré-14'></div>
+          </div>
         </div>
-        <p>Logement à consommation énergétique excessive.</p>
-        <h6> Géorisques </h6>
+        <p><br/>Logement à consommation énergétique excessive.</p>
+        <h3> Géorisques </h3>
         <p>Les informations sur les risques auxquels ce bien est exposé sont disponibles sur le site Géorisques https://www.georisques.gouv.fr/.
         </p>
-        <h6>A propos du prix</h6>
+        <h3>A propos du prix</h3>
         <ul>
           <li> Prix du bien : 105 000 € hors frais notariés, d'enregistrement et de publicité foncière</li>
         </ul>
         <h6>Informations sur la copropriété</h6>
         <ul>
-          <li>
+          <li>  
           N° du lot : NC
           </li>
           <li>
@@ -172,7 +201,9 @@ function App() {
         {/* Fin Formulaire */}
 
         {/* Bloc 2 */}
-        <div>
+        </div>
+
+        <div className='items-section'>
           <p> Contacter ce professionnel</p>
         </div>
       </div>
@@ -181,23 +212,122 @@ function App() {
 
       {/* Troisieme section */}
       <div>
+         <div className='textBlue'>
+          Contacter ce professionnel
+         </div>
+         <div className='cardContainer'>
+          <div>
+            <div className='item-cardContainer'>
+              <img className="imgCard" src='images/CASAVO.jpg' alt='logo'/>
+              <div> CASAVO </div>
+            </div>
+            
 
+          </div>
+         </div>
       </div>
       {/* Fin troisieme section */}
 
-      <h5>Autres biens aux alentours</h5>
+      <br/>
+      <br/>
+      <div className='avantFooter'>
+          <h5>Autres biens aux alentours</h5>
+      </div>
 
       {/* Slider end */}
       <div>
-
+      <div >
+        <br/>
+        <Slider {...settings}>
+          <div className='sliderClass'>
+            <img src='images/9.jpg' alt='logo'/>
+            <div className='textSlider'>
+              Appartements
+              <br/>
+              15 000 €
+              <br/>
+              1 pièce• 10m²
+              <br/>
+              PARIS 16E (75016)
+            </div>
+          </div>
+          <div className='sliderClass'>
+            <img src='images/10.jpg' alt='logo'/>
+            <div className='textSlider'>
+              Appartements
+              <br/>
+              95 000 €
+              <br/>
+              1 pièce• 10m²
+              <br/>
+              PARIS 16E (75016)
+            </div>
+          </div>
+          <div className='sliderClass'>
+            <img src='images/11.jpg' alt='logo'/>
+            <div className='textSlider'>
+              Appartements
+              <br/>
+              85 000 €
+              <br/>
+              1 pièce• 10m²
+              <br/>
+              PARIS 16E (75016)
+            </div>
+          </div>
+          <div className='sliderClass'>
+            <img src='images/11.jpg' alt='logo'/>
+            <div className='textSlider'>
+              Appartements
+              <br/>
+              10 000 €
+              <br/>
+              1 pièce• 10m²
+              <br/>
+              PARIS 16E (75016)
+            </div>
+          </div>
+          <div className='sliderClass'>
+            <img src='images/10.jpg' alt='logo'/>
+            <div className='textSlider'>
+              Appartements
+              <br/>
+              58 000 €
+              <br/>
+              1 pièce• 10m²
+              <br/>
+              PARIS 16E (75016)
+            </div>
+          </div>
+          <div className='sliderClass'>
+            <img src='images/9.jpg' alt='logo'/>
+            <div className='textSlider'>
+              Appartements
+              <br/>
+              105 000 €
+              <br/>
+              1 pièce• 10m²
+              <br/>
+              PARIS 16E (75016)
+            </div>
+          </div>
+        </Slider>
+        <br/>
+      </div>
       </div>
       {/* Fin Slider End */}
-      <h6>Recherche par commodités</h6>
-      <div>
-        Appartements à Paris 16e : &nbsp;
-        <a href='/'><button> Passoire thermique (461)</button></a>
+      
+
+
+
+      <div className='avantFooter'>
+        <h5>Recherche par commodités</h5>
+        <p>Appartements à Paris 16e : &nbsp;
+        <a href='/'><button className='buttonEnd'> Passoire thermique (461)</button></a>
+        </p>
       </div>
-      <br/>
+
+      </div>
 
       {/* Retour */}
       <div className='jump-back'>

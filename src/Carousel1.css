@@ -1,0 +1,78 @@
+.carousel {
+  background-color: black;
+  opacity: 0.8;
+}
+.carousel.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+}
+.carousel.fullscreen .carousel-container {
+  max-width: none;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.carousel.fullscreen .carousel-item.large-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.carousel.fullscreen .fullscreen-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel.fullscreen .fullscreen-overlay .close-icon,
+.carousel.fullscreen .fullscreen-overlay .prev-icon,
+.carousel.fullscreen .fullscreen-overlay .next-icon {
+  position: absolute;
+  top: 20px;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+}
+.carousel.fullscreen .fullscreen-overlay .close-icon {
+  right: 2%;
+  top: 40%;
+}
+.carousel.fullscreen .fullscreen-overlay .prev-icon {
+  left: 200px;
+  top: 400px;
+}
+.carousel.fullscreen .fullscreen-overlay .next-icon {
+  right: 200px;
+  top: 400px;
+}
+.carousel.fullscreen .fullscreen-overlay img {
+  max-width: 80%;
+  max-height: 80vh;
+  background-color: rgb(0, 0, 0);
+}
+
+.carousel-container {
+  background-color: black;
+  max-width: 500px;
+  margin: auto;
+}
+
+.carousel-item {
+  position: relative;
+  text-align: center;
+}
+.carousel-item img {
+  max-width: 100%;
+  max-height: 100%;
+  height: 500px;
+  margin: 0 auto;
+}/*# sourceMappingURL=Carousel1.css.map */
